@@ -607,7 +607,7 @@ export default assign({
             tabIndex='0'
             onClick={this.safeNavigateToList}
           >
-            <i className='k-icon k-icon-kobo' />
+            <i className='k-icon k-icon-prev' />
           </bem.FormBuilderHeader__cell>
 
           <bem.FormBuilderHeader__cell m={'name'} >

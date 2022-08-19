@@ -173,10 +173,10 @@ class Drawer extends Reflux.Component {
 
         <bem.KDrawer__secondaryIcons>
           { stores.session.isLoggedIn &&
-            <IntercomHelpBubble/>
-          }
-          { stores.session.isLoggedIn &&
-            <SupportHelpBubble/>
+            <a href="http://help.immap.org"
+              className='k-drawer__link' target='_blank' data-tip={t('Help')}>
+              <i className='k-icon k-icon-help'/>
+            </a>
           }
           { stores.session.isLoggedIn &&
             stores.session.currentAccount.projects_url &&
@@ -186,13 +186,6 @@ class Drawer extends Reflux.Component {
               data-tip={t('Projects (legacy)')}
             >
               <i className='k-icon k-icon-globe' />
-            </a>
-          }
-          { envStore.isReady &&
-            envStore.data.source_code_url &&
-            <a href={envStore.data.source_code_url}
-              className='k-drawer__link' target='_blank' data-tip={t('Source')}>
-              <i className='k-icon k-icon-logo-github' />
             </a>
           }
         </bem.KDrawer__secondaryIcons>

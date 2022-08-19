@@ -567,12 +567,6 @@ export default class Reports extends React.Component {
                     </bem.FormView__cell>
                   )}
 
-                <InlineMessage
-                  type='warning'
-                  icon='alert'
-                  message={t('This is an automated report based on raw data submitted to this project. Please conduct proper data cleaning prior to using the graphs and figures used on this page.')}
-                />
-
                 <ReportContents
                   parentState={this.state}
                   reportData={reportData}
